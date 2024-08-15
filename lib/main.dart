@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:koode_v2/alphabet_list.dart';
 import 'package:koode_v2/alphabet_page.dart';
 import 'package:koode_v2/default_audio.dart';
+import 'package:koode_v2/recordings_list.dart';
 import 'home_page.dart';
 
 void main() {
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomePage(),
         '/default-audios': (context) => const DefaultAudiosPage(),
         '/alphabet-list': (context) => const AlphabetListPage(),
+        '/recordings-list': (context) => const RecordingsListPage(),
       },
       onGenerateRoute: (settings) {
         if (settings.name == '/alphabet-detail') {
