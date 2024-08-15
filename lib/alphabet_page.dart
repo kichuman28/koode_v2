@@ -37,7 +37,7 @@ class _AlphabetDetailPageState extends State<AlphabetDetailPage> {
         child: Center(
           child: Text(
             widget.alphabet,
-            style: TextStyle(fontSize: 200, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 200, fontWeight: FontWeight.bold),
           ),
         ),
       ),
