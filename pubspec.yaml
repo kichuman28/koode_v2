@@ -13,15 +13,17 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-
   cupertino_icons: ^1.0.8
   record: ^5.1.2
   just_audio: ^0.9.39
   path_provider: ^2.1.4
   path: ^1.9.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
 
 dev_dependencies:
+  hive_generator: ^1.0.0
+  build_runner: ^2.0.0
   flutter_test:
     sdk: flutter
 
