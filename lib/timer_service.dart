@@ -7,6 +7,9 @@ class TimerService {
   Timer? _timer;
 
   void startTimer(VoidCallback callback) {
+    // Reset the duration before starting the timer
+    recordingDuration = 0;
+
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       recordingDuration++;
       callback();
