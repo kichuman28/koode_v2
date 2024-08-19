@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:koode_v2/models/audio_recording.dart';
-import 'package:koode_v2/ui/components/player_dialog.dart';
+import 'package:koode_v2/ui/components/audio_player_popup.dart';
 
 Future<void> playRecording({
   required BuildContext context,
