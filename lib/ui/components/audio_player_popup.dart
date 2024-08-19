@@ -1,5 +1,7 @@
-import 'dart:async';
+//In the future planning to make an entire screen for playing each audio rather than
+//a popup, like dolby app.
 
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:koode_v2/models/audio_recording.dart';
