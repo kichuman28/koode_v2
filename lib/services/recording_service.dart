@@ -5,7 +5,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
 import 'dart:io';
 import 'package:hive/hive.dart';
-import 'models/audio_recording.dart';
+import '../models/audio_recording.dart';
 
 class RecordingService {
   final AudioRecorder _audioRecorder = AudioRecorder();

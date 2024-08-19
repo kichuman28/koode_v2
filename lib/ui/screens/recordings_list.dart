@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'models/audio_recording.dart';
+import '../../models/audio_recording.dart';
 import 'package:just_audio/just_audio.dart';
 
 class RecordingsListPage extends StatefulWidget {
   const RecordingsListPage({super.key});
 
   @override
-  _RecordingsListPageState createState() => _RecordingsListPageState();
+  RecordingsListPageState createState() => RecordingsListPageState();
 }
 
-class _RecordingsListPageState extends State<RecordingsListPage> {
+class RecordingsListPageState extends State<RecordingsListPage> {
   final AudioPlayer _audioPlayer = AudioPlayer();
   AudioRecording? _currentRecording;
   bool _isPlaying = false;
   Duration _currentPosition = Duration.zero;
   Duration _totalDuration = Duration.zero;
   bool _isSelectionMode = false;
-  Set<int> _selectedIndices = {};
+  final Set<int> _selectedIndices = {};
 
   @override
   void initState() {
@@ -198,6 +197,8 @@ class _RecordingsListPageState extends State<RecordingsListPage> {
       _currentRecording = recording;
       _totalDuration = _audioPlayer.duration ?? Duration.zero;
     });
+
+    if (!mounted) return;
 
     // Show the dialog with the player controls
     showDialog(

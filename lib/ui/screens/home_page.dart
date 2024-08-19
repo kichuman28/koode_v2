@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:koode_v2/recording_service.dart';
-import 'package:koode_v2/save_dialog.dart';
-import 'package:koode_v2/timer_service.dart';
+import 'package:koode_v2/services/recording_service.dart';
+import 'package:koode_v2/services/timer_service.dart';
+import 'package:koode_v2/ui/components/save_dialog.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
