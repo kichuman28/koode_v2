@@ -19,7 +19,7 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
 
     // Initialize the animation controller and the fade animation
     _controller = AnimationController(
-      duration: const Duration(seconds: 1),
+      duration: const Duration(milliseconds: 700),
       vsync: this,
     );
 
@@ -39,7 +39,7 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
   }
 
   _navigateToHome() async {
-    await Future.delayed(const Duration(seconds: 2), () {});
+    await Future.delayed(const Duration(seconds: 3), () {});
     if (mounted) {
       Navigator.pushReplacement(
         context,
@@ -57,34 +57,47 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF071952), // Updated background color
-      body: FadeTransition(
-        opacity: _animation,
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                'Koode',
-                style: GoogleFonts.greatVibes(
-                  textStyle: const TextStyle(
-                    fontSize: 100,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF97FEED), // Updated text color
-                  ),
-                ),
-              ),
-              const SizedBox(height: 13), // Spacing between title and tagline
-              Text(
-                'Voices That Stay With You',
-                style: GoogleFonts.poppins(
-                  textStyle: const TextStyle(
-                    fontSize: 24, // Smaller size for the tagline
-                    color: Color(0xFF97FEED), // Same text color
-                  ),
-                ),
-              ),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFF071952), // Dark blue
+              Color(0xFF0B666A), // Teal blue
+              Color(0xFF35A29F), // Light teal
+              Color(0xFF97FEED), // Light blue
             ],
+          ),
+        ),
+        child: FadeTransition(
+          opacity: _animation,
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'Koode',
+                  style: GoogleFonts.greatVibes(
+                    textStyle: const TextStyle(
+                      fontSize: 100,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFE2FFF9), // Updated text color
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 13), // Spacing between title and tagline
+                Text(
+                  'Voices That Stay With You',
+                  style: GoogleFonts.poppins(
+                    textStyle: const TextStyle(
+                      fontSize: 24, // Smaller size for the tagline
+                      color: Color(0xFFE2FFF9), // Same text color
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
