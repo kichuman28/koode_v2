@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart'; // Make sure to import your home page
+import 'package:koode_v2/ui/screens/welcome_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -44,7 +44,7 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
       Navigator.pushReplacement(
         context,
         PageRouteBuilder(
-          pageBuilder: (context, animation1, animation2) => const HomePage(),
+          pageBuilder: (context, animation1, animation2) => const WelcomePage(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(opacity: animation, child: child);
           },
@@ -61,15 +61,30 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
       body: FadeTransition(
         opacity: _animation,
         child: Center(
-          child: Text(
-            'Koode',
-            style: GoogleFonts.greatVibes(
-              textStyle: const TextStyle(
-                fontSize: 100,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF97FEED), // Updated text color
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Koode',
+                style: GoogleFonts.greatVibes(
+                  textStyle: const TextStyle(
+                    fontSize: 100,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF97FEED), // Updated text color
+                  ),
+                ),
               ),
-            ),
+              const SizedBox(height: 13), // Spacing between title and tagline
+              Text(
+                'Voices That Stay With You',
+                style: GoogleFonts.poppins(
+                  textStyle: const TextStyle(
+                    fontSize: 24, // Smaller size for the tagline
+                    color: Color(0xFF97FEED), // Same text color
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
