@@ -63,9 +63,9 @@ class SplashScreenState extends State<SplashScreen> with SingleTickerProviderSta
         child: Center(
           child: Text(
             'Koode',
-            style: GoogleFonts.balthazar(
+            style: GoogleFonts.greatVibes(
               textStyle: const TextStyle(
-                fontSize: 48,
+                fontSize: 100,
                 fontWeight: FontWeight.bold,
                 color: Color(0xFF97FEED), // Updated text color
               ),
