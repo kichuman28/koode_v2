@@ -53,7 +53,7 @@ class WelcomePage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: _buildButton(
                         context: context,
-                        label: "Go to Home",
+                        label: "Record",
                         color: const Color(0xFF35A29F),
                         onTap: () {
                           Navigator.pushNamed(context, '/home');
