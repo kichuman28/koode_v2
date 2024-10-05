@@ -1,4 +1,10 @@
 
+
+
+https://github.com/user-attachments/assets/1b75a6af-26ef-4643-903f-e04b0436a890
+
+
+
 # Koode - Educational App for Kids
 
 Koode is an interactive educational app designed to make learning fun for children. It features various categories like alphabets, numbers, animals, and family relationships, each equipped with engaging visuals and audio pronunciations to aid in effective learning.
