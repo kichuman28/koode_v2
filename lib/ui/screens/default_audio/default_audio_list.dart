@@ -37,7 +37,7 @@ class DefaultAudiosPage extends StatelessWidget {
                 label: "Animals",
                 color: const Color(0xFF35A29F),
                 onTap: () {
-                  // Navigator.pushNamed(context, '/animals-list');
+                  Navigator.pushNamed(context, '/animals-list');
                 },
               ),
               _buildCategoryTab(
@@ -46,7 +46,7 @@ class DefaultAudiosPage extends StatelessWidget {
                 label: "Numbers",
                 color: const Color(0xFF0B666A),
                 onTap: () {
-                  // Navigator.pushNamed(context, '/numbers-list');
+                  Navigator.pushNamed(context, '/numbers-list');
                 },
               ),
               _buildCategoryTab(
@@ -55,7 +55,7 @@ class DefaultAudiosPage extends StatelessWidget {
                 label: "Relationships",
                 color: const Color(0xFF0B666A),
                 onTap: () {
-                  // Navigator.pushNamed(context, '/relationships-list');
+                  Navigator.pushNamed(context, '/relationships-list');
                 },
               ),
             ],

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:koode_v2/ui/screens/default_audio/alphabets/alphabet_list.dart';
 import 'package:koode_v2/ui/screens/default_audio/alphabets/alphabet_page.dart';
+import 'package:koode_v2/ui/screens/default_audio/animals/animal_list.dart';
 import 'package:koode_v2/ui/screens/default_audio/default_audio_list.dart';
+import 'package:koode_v2/ui/screens/default_audio/numbers/numbers_list.dart';
+import 'package:koode_v2/ui/screens/default_audio/relationships/relationships_list.dart';
 import 'package:koode_v2/ui/screens/home_page.dart';
 import 'package:koode_v2/ui/screens/recordings_list/recordings_list_page.dart';
 import 'package:koode_v2/ui/screens/splash_screen.dart';
@@ -14,7 +17,10 @@ class AppRoutes {
     '/home': (context) => const HomePage(), // HomePage moved to '/home'
     '/default-audios': (context) => const DefaultAudiosPage(),
     '/alphabet-list': (context) => const AlphabetListPage(),
+    '/animals-list': (context) => const AnimalsListPage(),
+    '/numbers-list': (context) => const NumberListPage(),
     '/recordings-list': (context) => const RecordingsListPage(),
+    '/relationships-list': (context) => const RelationshipsListPage(),
   };
 
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {

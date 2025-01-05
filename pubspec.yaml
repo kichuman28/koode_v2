@@ -39,5 +39,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/audios/alphabets/
+    - assets/audios/animals/
+    - assets/audios/numbers/
+    - assets/audios/relationships/
 
 
